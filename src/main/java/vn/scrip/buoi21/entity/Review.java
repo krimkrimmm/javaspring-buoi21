@@ -8,8 +8,9 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String username;
-    private String comment;
+    private String username;  // Đây là thuộc tính username
+
+    private String comment;  // Cập nhật lại tên thuộc tính này là comment, không phải content
     private int rating;
 
     @ManyToOne
@@ -26,19 +27,19 @@ public class Review {
     }
 
     public String getUsername() {
-        return username;
+        return username;  // Phương thức getUsername
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username;  // Phương thức setUsername
     }
 
     public String getComment() {
-        return comment;
+        return comment;  // Phương thức getComment
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        this.comment = comment;  // Phương thức setComment
     }
 
     public int getRating() {
@@ -55,8 +56,5 @@ public class Review {
 
     public void setMovie(Movie movie) {
         this.movie = movie;
-    }
-
-    public void setContent(String content) {
     }
 }
